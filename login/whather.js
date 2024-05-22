@@ -35,24 +35,24 @@ async function checkWeather(city){
     wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
 
 
-    switch(weather_data.weather[0].main){
-        case 'Clouds':
-            weather_img.src = "/assets/cloud.png";
-            break;
-        case 'Clear':
-            weather_img.src = "/assets/clear.png";
-            break;
-        case 'Rain':
-            weather_img.src = "/assets/rain.png";
-            break;
-        case 'Mist':
-            weather_img.src = "/assets/mist.png";
-            break;
-        case 'Snow':
-            weather_img.src = "/assets/snow.png";
-            break;
+    // switch(weather_data.weather[0].main){
+    //     case 'Clouds':
+    //         weather_img.src = "D:\Diploma\sem 2\Swpd\Project\wheather app\login\swpd_project\login\assets\cloud.png";
+    //         break;
+    //     case 'Clear':
+    //         weather_img.src = "D:\Diploma\sem 2\Swpd\Project\wheather app\login\swpd_project\login\assets\clear.png";
+    //         break;
+    //     case 'Rain':
+    //         weather_img.src = "D:\Diploma\sem 2\Swpd\Project\wheather app\login\swpd_project\login\assets\rain.png";
+    //         break;
+    //     case 'Mist':
+    //         weather_img.src = "D:\Diploma\sem 2\Swpd\Project\wheather app\login\swpd_project\login\assets\mist.png";
+    //         break;
+    //     case 'Snow':
+    //         weather_img.src = "D:\Diploma\sem 2\Swpd\Project\wheather app\login\swpd_project\login\assets\snow.png";
+    //         break;
 
-    }
+    // }
 
     console.log(weather_data);
 }
