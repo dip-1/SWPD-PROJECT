@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SignUp</title>
+    <link rel="stylesheet" href="SignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+   <div class="container">
+    <header>
+        <h2>SignUp</h2>
+    </header>    
+        <form method="post" name="google-sheet">
+               
+                <div class="wrapper">
+                    <input type="text" id="First_Name" name="First Name" required>
+                    <label for="First_Name">First Name</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="text" id="Second_Name" name="Second Name" required>
+                    <label for="Second_Name">Second Name</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="text" id="input" name="Email" required>
+                    <label for="input">Email</label>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+
+                <div class="wrapper">
+                    <input type="password" id="password" name="Password" minlength="8" required>
+                    <label for="password">password</label>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+
+                <div class="wrapper">
+                    <input type="password" id="confirm_password" name="Confirm Password" minlength="8" required>
+                    <label for="password">Confirm Password</label>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+
+                <input  class="submit" type="submit" value="submit" name="Submit" onclick="goToPage()"></input>
+                
+                <script>
+                    function goToPage() {
+                      window.location.href = 'whather.html'; // Replace 'new_page.html' with the path to your HTML file
+                    }
+                  </script>
+
+                <div class="signup">
+                    Alredy have an accoutn ? <a href="login.html">LogIn</a>
+                </div>
+        </form>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwOMB8eNhVtsJbwKvX74XmOHw3Xwne7OSPyNWTB4zfSXWhXTPSiGHq_nGUqmdjsWmNJ/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+          
+          <script src="script.js"></script>
+
+    </div>
+
+</body>
+
+</html>
